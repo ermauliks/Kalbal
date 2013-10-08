@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131007184210) do
+ActiveRecord::Schema.define(version: 20131008093226) do
 
   create_table "kalbal_apps", force: true do |t|
     t.string   "message"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20131007184210) do
   create_table "posts", force: true do |t|
     t.string   "message"
     t.string   "user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", primary_key: "handle", force: true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

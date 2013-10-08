@@ -16,7 +16,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  it('It is not posting a message', function () {
     expect(scope.kalbals.length).toBe(3);
   });
 });
