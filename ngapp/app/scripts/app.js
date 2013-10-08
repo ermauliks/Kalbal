@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('kalbalApp', [])
+angular.module('kalbalApp', ['ngResource'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

@@ -1,10 +1,11 @@
 <h1>Kalbal</h1>
 <div class="hero-unit"> 	
  	<header>
- 		<form ng-submit='addKalnal()'>
+ 		<form ng-submit="post(message, userid)">
 			Start Kalbal!!!
  			<div controls form-inline>
- 				<input type="text" ng-model='kalbal' size="140" />
+ 				<input type="text" ng-model='message' size="140" />
+ 				<input type="text" style="display:none" ng-model='userid' size="140" value="1" />
  				<button type="submit" class="btn btn-primary">Kalbal</button>	
  			</div>
  		</form>
@@ -12,7 +13,7 @@
 </div>
 <section id='kalbals-holder'>
 	<ul ng-repeat='kalbal in kalbals'>
-		<li>{{kalbal}}</li>	
+		<li>{{kalbal.message}}</li>	
 	</ul>
 </section>
 
