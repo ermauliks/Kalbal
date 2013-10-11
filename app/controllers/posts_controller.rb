@@ -5,13 +5,12 @@ class PostsController < ApplicationController
   end
 
   def create
-  	STDERR.puts "Params are: #{params.inspect}"
-    @kalbal = Post.new(:message => params["message"])
+    kalbal = Post.create(:message => params[:message], :user => "maulik")
 
-    if @kalbal.save
-      render json: @kalbal, status: :ok
+    if kalbal
+      render json: kalbal, status: :ok
     else
-      render json: @kalbal.errors, status: :unprocessable_entity
+      render json:  kalbal.errors, status: :unprocessable_entity
     end
   end
 

@@ -1,21 +1,24 @@
 <div class="hero-unit"> 	
  	<header>
 		<h4>Register Your Self</h4> 
- 		<form ng-submit="register(handle, email, name, password)">
+ 		<form ng-submit="register(user)">
 
  			<div controls form-inline>
 
  				<label>Kalbal Handle</label>
- 				<input type="text" ng-model='handle' size="140" />
+ 				<input type="text" ng-model='user.handle' size="140" />
 
  				<label>Email</label>
- 				<input type="text" ng-model='email' size="140" />
+ 				<input type="text" ng-model='user.email' size="140" />
 
 				<label>Name</label>
-	 			<input type="text" ng-model='name' size="140" />
+	 			<input type="text" ng-model='user.name' size="140" />
 
 				<label>Password</label>
-	 			<input type="text" ng-model='password' size="140" />
+	 			<input type="text" ng-model='user.password' size="140" />
+
+	 			<label>Confirm password</label>
+	 			<input type="text" ng-model='user.confirm_password' size="140" />
 
  				<button type="submit" class="btn btn-primary">Register</button>	
  			</div>
